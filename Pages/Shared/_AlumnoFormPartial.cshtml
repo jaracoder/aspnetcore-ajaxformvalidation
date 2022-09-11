@@ -1,0 +1,84 @@
+﻿@using ASP.NET.Core.AjaxFormValidation.Models
+@model Alumno
+@using (Html.BeginForm("Register", "Home", FormMethod.Post,
+		new { id = "frmRegister", name = "frmRegister", @class = "my-0" }))
+{
+	<div class="form-group row">
+		<label asp-for="DNI" class="col-sm-2 col-form-label"></label>
+		<div class="col-sm-2">
+			<input asp-for="DNI" type="text" class="form-control form-control-sm mb-4" id="dni" />
+			<span asp-validation-for="DNI" class="text-danger"></span>
+		</div>
+		
+	</div>
+	<div class="form-group row">
+		<label asp-for="Nombre" class="col-sm-2 col-form-label"></label>
+		<div class="col-sm-5">
+			<input asp-for="Nombre" type="text" class="form-control form-control-sm mb-4" id="nombre" />
+			<span asp-validation-for="Nombre" class="text-danger"></span>
+		</div>
+		
+	</div>
+	<div class="form-group row">
+		<label asp-for="Apellidos" class="col-sm-2 col-form-label"></label>
+		<div class="col-sm-5">
+			<input asp-for="Apellidos" type="text" class="form-control form-control-sm mb-4" id="apellidos" />
+		<span asp-validation-for="Apellidos" class="text-danger"></span>
+		</div>
+		
+	</div>
+	<div class="form-group row">
+		<label asp-for="FechaNacimiento" class="col-sm-2 col-form-label"></label>
+		<div class="col-sm-2">
+			<input asp-for="FechaNacimiento" type="text" class="form-control form-control-sm mb-4" id="fechaNacimiento" />
+		<span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+		</div>
+		
+	</div>
+	<div class="form-group row">
+		<label asp-for="DatosInteres" class="col-sm-2 col-form-label"></label>
+		<div class="col-sm-5">
+			<input asp-for="DatosInteres" type="text" class="form-control form-control-sm mb-4" id="datosInteres" />
+			<span asp-validation-for="DatosInteres" class="text-danger"></span>
+		</div>
+		
+	</div>
+	<div class="form-group row">
+		<label asp-for="Telefono" class="col-sm-2 col-form-label"></label>
+		<div class="col-sm-2">
+			<input asp-for="Telefono" type="text" class="form-control form-control-sm mb-4" id="telefono" />
+			<span asp-validation-for="Telefono" class="text-danger"></span>
+		</div>
+		
+	</div>
+	<div class="form-group row">
+		<label asp-for="Email" class="col-sm-2 col-form-label"></label>
+		<div class="col-sm-3">
+			<input asp-for="Email" type="text" class="form-control form-control-sm mb-4" id="email" />
+			<span asp-validation-for="Email" class="text-danger invalid-feedback"></span>
+		</div>
+		
+	</div>
+	<div class="form-group row">
+		<label asp-for="NotaMedia" class="col-sm-2 col-form-label"></label>
+		<div class="col-sm-1">
+			<input asp-for="NotaMedia" type="text" class="form-control form-control-sm mb-4" id="notaMedia" />
+			<span asp-validation-for="NotaMedia" class="text-danger"></span>
+		</div>
+		
+	</div>
+	<div class="form-group row">
+		<label asp-for="UrlCurso" class="col-sm-2 col-form-label"></label>
+		<div class="col-sm-5">
+			<input asp-for="UrlCurso" type="text" class="form-control form-control-sm mb-4" id="urlCurso" />
+			<span asp-validation-for="UrlCurso" class="text-danger"></span>
+		</div>
+		
+	</div>
+	<div class="form-group">
+		<button id="btnRegister" type="submit" class="button primary" title="Registrar ahora">
+			<i class="far fa-envelope pr-1" aria-hidden="true"></i>
+			Registrar
+		</button>
+	</div>
+}

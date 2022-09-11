@@ -1,0 +1,14 @@
+﻿@page
+@using ASP.NET.Core.AjaxFormValidation.Models
+@model IndexModel
+@{
+	ViewData["Title"] = "Home";
+	Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+@await Html.PartialAsync("_AlumnoFormPartial", new Alumno())
+
+@section Scripts
+{
+	@await Html.PartialAsync("_ValidationScriptsPartial")
+}
